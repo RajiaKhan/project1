@@ -5,76 +5,303 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Newsletter</title>
-    <style>
-        .bg {
-            background-image: url("https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20112%20%2810%29.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Feature-1</title>
 </head>
+<style>
+    .text-gradient {
+        background: linear-gradient(93.33deg,
+                #fd944e 2.95%,
+                #f56565 19.91%,
+                #1d4ed8 37.92%,
+                #ff3565 99.42%);
 
-<body style="font-family: poppins" class="overflow-y-hidden">
-    <div
-        class="lg:max-w-[1440px] bg md:max-w-[744px] max-w-[375px] m-auto backdrop-blur-md lg:px-5 xl:px-12 2xl:px-12 md:px-5 px-3 py-20 mt-12">
-        <div class="lg:flex justify-between items-center gap-16">
-            <div class="lg:max-w-[624px] w-full">
-                <h1 class="lg:text-5xl text-3xl text-gray-800 font-medium">
-                    Newsletter
-                </h1>
-                <h1
-                    class="lg:text-lg xl:text-xl 2xl:text-xl md:text-xl text-base md:text-lg text-base text-gray-600 font-normal mt-5 lg:max-w-[540px] w-full">
-                    Sign up for our newsletter and get weekly updates. We only send
-                    emails about our latest products on the market once a week every
-                    Friday
-                </h1>
-                <div class="flex lg:mt-12 md:mt-12 mt-5">
-                    <input type="text" id="first_name"
-                        class="hidden lg:block md:block bg-transparent border-black border text-sm outline-none block lg:w-96 w-full py-3.5 px-3 placeholder:text-gray-800 lg:rounded-l-full md:rounded-l-full"
-                        placeholder="Your email" required />
-                    <button
-                        class="text-white hidden lg:block md:block bg-black hover:bg-gray-900 focus:bg-gray-900 py-3.5 lg:w-32 md:w-44 w-full lg:rounded-r-full md:rounded-r-full mt-4 lg:mt-0 md:mt-0">
-                        Subscribe
-                    </button>
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .bg {
+        background-image: url("https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20289%20%281%29.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .bg-1 {
+        background: rgba(255, 255, 255, 0.36);
+    }
+
+    .bg-2 {
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid #e5e7eb;
+        border-radius: 24px;
+    }
+</style>
+
+<body style="font-family: poppins" class="overflow-hidden">
+    <div class="py-12">
+        <div
+            class="lg:max-w-[1440px] bg md:max-w-[744px] max-w-[375px] m-auto backdrop-blur-md lg:px-3 xl:px-14 2xl:px-14 px-5 py-14">
+            <div class="lg:flex lg:flex-row flex flex-col flex-col-reverse gap-6">
+                <div class="w-full">
+                    <div class="max-w-[624px] relative mx-auto lg:mx-0 mt-6 md:mt-0">
+                        <div class="w-full">
+                            <div class="md:max-w-[305.86px] max-w-[168.12px] md:py-12 py-6 bg-1 border rounded-3xl">
+                                <img class="mx-auto md:block hidden"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%2033684.svg" />
+                                <img class="mx-auto md:hidden block"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%2033684%20%281%29.svg" />
+                                <div class="md:block hidden">
+                                    <h1 class="md:text-3xl text-base text-gray-800 font-medium text-center">
+                                        Taylor Smith
+                                    </h1>
+                                    <h1 class="text-gray-600 text-sm font-normal mt-3 text-center">
+                                        Sales development
+                                    </h1>
+                                    <h1 class="text-gray-600 text-sm font-normal mt-3 text-center">
+                                        representative
+                                    </h1>
+                                    <h1 class="text-gray-600 text-medium text-lg text-center mt-8">
+                                        23 years old
+                                    </h1>
+                                </div>
+                                <div class="md:hidden block">
+                                    <h1 class="md:text-3xl text-base text-gray-800 font-medium text-center">
+                                        Taylor Smith
+                                    </h1>
+                                    <h1 class="text-gray-600 font-normal mt-1 text-center" style="font-size: 7.7px">
+                                        Sales development
+                                    </h1>
+                                    <h1 class="text-gray-600 text-sm font-normal mt-0.5 text-center"
+                                        style="font-size: 7.7px">
+                                        representative
+                                    </h1>
+                                    <h1 class="text-gray-600 text-medium text-lg text-center mt-2"
+                                        style="font-size: 9.89px">
+                                        23 years old
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div
+                                class="md:max-w-[371px] max-w-[203.93px] bg-2 absolute right-0 md:top-28 top-16 md:px-8 px-3 md:py-8 py-3">
+                                <h1 class="md:text-2xl text-xs">Profile</h1>
+                                <div class="bg-white md:px-5 px-2 md:py-5 py-2 rounded-2xl shadow md:mt-3 mt-0.5">
+                                    <div class="">
+                                        <h1 class="text-base text-gray-800 font-medium md:block hidden">
+                                            Country
+                                        </h1>
+                                        <h1 class="text-gray-800 font-medium md:hidden block" style="font-size: 8.79px">
+                                            Country
+                                        </h1>
+                                        <h1 class="text-sm text-gray-600 mt-1 md:block hidden">
+                                            United States of America
+                                        </h1>
+                                        <h1 class="mt-0.5 text-gray-600 md:hidden block" style="font-size: 7.7px">
+                                            United States of America
+                                        </h1>
+                                    </div>
+                                    <div class="md:mt-4 mt-2">
+                                        <h1 class="text-base text-gray-800 font-medium md:block hidden">
+                                            Position
+                                        </h1>
+                                        <h1 class="text-gray-800 font-medium md:hidden block" style="font-size: 8.79px">
+                                            Position
+                                        </h1>
+                                        <h1 class="text-sm text-gray-600 mt-1 md:block hidden">
+                                            SDR, BDR, Account manager
+                                        </h1>
+                                        <h1 class="text-gray-600 mt-0.5 md:hidden block" style="font-size: 7.7px">
+                                            SDR, BDR, Account manager
+                                        </h1>
+                                    </div>
+                                    <div class="md:mt-4 mt-2">
+                                        <h1 class="text-gray-800 font-medium md:hidden block" style="font-size: 8.79px">
+                                            Daily focus
+                                        </h1>
+                                        <h1 class="text-base text-gray-800 font-medium md:block hidden">
+                                            Daily focus
+                                        </h1>
+                                        <h1 class="text-sm text-gray-600 mt-1 md:block hidden">
+                                            Reaching out to leads, managing network
+                                        </h1>
+                                        <h1 class="text-gray-600 md:hidden block" style="font-size: 7.7px">
+                                            Reaching out to leads, managing network
+                                        </h1>
+                                    </div>
+                                    <div class="md:mt-4 mt-2">
+                                        <h1 class="text-base text-gray-800 font-medium md:block hidden">
+                                            Email
+                                        </h1>
+                                        <h1 class="text-gray-800 font-medium md:hidden block" style="font-size: 8.79px">
+                                            Email
+                                        </h1>
+                                        <h1 class="text-sm text-gray-600 mt-1 md:block hidden">
+                                            taylorsmith@gmail.com
+                                        </h1>
+                                        <h1 class="text-gray-600 md:hidden block" style="font-size: 7.7px">
+                                            taylorsmith@gmail.com
+                                        </h1>
+                                    </div>
+                                    <h1 class="text-gray-600 text-sm text-center mt-5 md:block hidden">
+                                        “I try to be as efficient as possible”
+                                    </h1>
+                                    <h1 class="text-gray-600 text-sm text-center mt-3 md:hidden block"
+                                        style="font-size: 7.7px">
+                                        “I try to be as efficient as possible”
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
-                    <input type="text" id="first_name"
-                        class="bg-transparent border-black block lg:hidden md:hidden border text-sm outline-none block w-full py-3.5 px-3 placeholder:text-gray-800 rounded-full"
-                        placeholder="Your email" required />
-                    <button
-                        class="text-white bg-black hover:bg-gray-900 block lg:hidden md:hidden focus:bg-gray-900 py-3.5 w-full rounded-full mt-4 lg:mt-0 md:mt-0">
-                        Subscribe
+                <div class="lg:max-w-[515px] md:max-w-[715px] lg:ml-auto ml-0">
+                    <h1 class="text-gray-800 lg:text-4xl xl:text-5xl 2xl:text-5xl text-3xl font-medium lg:pt-14 pt-0">
+                        Analyze your market, identify your buyer
+                    </h1>
+
+                    <div class="flex gap-3 items-start mt-12">
+                        <div class="">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Check%20icon%20%282%29.svg" />
+                        </div>
+                        <div class="">
+                            <h1 class="lg:text-base 2xl:text-lg xl:text-lg text-base text-gray-600 font-normal">
+                                Activate your Ideal Customer Profile
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start mt-3">
+                        <div class="">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Check%20icon%20%282%29.svg" />
+                        </div>
+                        <div class="">
+                            <h1 class="lg:text-base 2xl:text-lg xl:text-lg text-base text-gray-600 font-normal">
+                                Determine your purpose
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start mt-3">
+                        <div class="">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Check%20icon%20%282%29.svg" />
+                        </div>
+                        <div class="">
+                            <h1 class="lg:text-base 2xl:text-lg xl:text-lg text-base text-gray-600 font-normal">
+                                Research the state of the industry
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start mt-3">
+                        <div class="">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Check%20icon%20%282%29.svg" />
+                        </div>
+                        <div class="">
+                            <h1 class="lg:text-base 2xl:text-lg xl:text-lg text-base text-gray-600 font-normal">
+                                Identify your target customer
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex item-start gap-3 mt-3">
+                        <img class="" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Check%20icon%20%282%29.svg" />
+
+                        <h1 class="lg:text-base 2xl:text-lg xl:text-lg text-base text-gray-600 font-normal">
+                            Combine the information from all of your existing go-to-market
+                            tools
+                        </h1>
+                    </div>
+                    <button class="bg-black text-white rounded-full py-3 md:w-48 w-full mt-12 hover:bg-zinc-900">
+                        Create Your Profile
                     </button>
                 </div>
             </div>
-            <div class="lg:max-w-[624px] w-full border rounded-2xl lg:px-8 px-3 py-9 mt-12 lg:mt-0">
-                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Frame%201937.svg" />
-                <h1
-                    class="lg:text-lg xl:text-xl 2xl:text-xl md:text-xl text-base text-gray-600 font-normal mt-5 lg:max-w-[560px] w-full">
-                    This website is the best I have found so far. Firstly it has huge
-                    range of softwares which are perfectly designed. All of the designs
-                    work on every medium smoothly. I just love it!!!
-                </h1>
-                <div class="flex items-center gap-5 mt-8">
-                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Uer%20Image.svg" />
-
-                    <div class="">
-                        <h1 class="text-gray-800 lg:text-lg text-base font-medium leading-6">
-                            William Jackson
+            <div class="lg:flex gap-5 mt-32 items-center">
+                <div class="w-full">
+                    <div class="lg:max-w-[624px] md:max-w-[696px]">
+                        <h1 class="lg:text-4xl xl:text-5xl 2xl:text-5xl md:text-3xl text-2xl font-medium text-gray-800">
+                            Build a demand-driven engine
                         </h1>
-                        <h1 class="text-gray-600 lg:text-lg text-base font-normal">
-                            CEO at Alphasquad Limited
+                        <h1 class="text-gray-600 lg:text-base 2xl:text-lg xl:text-lg text-base font-medium mt-8">
+                            With targeted advertising and email campaigns, convert prospects
+                            into consumers. Create target audiences using 100+ B2B traits
+                            and website intent signals, find high-fit accounts exploring
+                            your site, and tailor every engagement.
                         </h1>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="max-w-[515px] mx-auto lg:mx-0 lg:float-right">
+                        <div class="flex items-center">
+                            <div class="">
+                                <img class="h-full"
+                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20427319065.png" />
+                            </div>
+                            <div class="w-full">
+                                <div
+                                    class="bg-gray-50 flex md:gap-5 gap-2 md:max-w-[292px] max-w-[194.48px] md:px-8 px-3 md:py-7 py-3 rounded-2xl ml-6 mt-8 shadow-lg items-center">
+                                    <img class="" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/element-1.svg" />
+                                    <h1 class="md:text-lg text-xs text-gray-800">
+                                        Personalize Site
+                                    </h1>
+                                </div>
+                                <div
+                                    class="bg-gray-50 flex mt-8 max-w-[403px] relative rounded-2xl px-3 py-3 ml-6 shadow-lg">
+                                    <div class="w-full">
+                                        <div class="flex">
+                                            <h1 class="text-gray-800" style="font-size: 10px">
+                                                Sales Activities
+                                            </h1>
+                                            <div
+                                                class="ml-auto border rounded-full flex py-1 px-3 gap-1 cursor-pointer">
+                                                <h1 class="" style="font-size: 7px">Monthly</h1>
+                                                <img
+                                                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dashicons_arrow-up-alt2.svg" />
+                                            </div>
+                                        </div>
+                                        <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June"],
+                datasets: [
+                    {
+                        data: [20, 30, 20, 25, 30, 40, 30, 40],
+                        borderColor: "#1f2937",
+                        fill: false,
+                    },
+                    {
+                        data: [35, 25, 40, 20, 35, 20, 60, 20],
+                        borderColor: "#e5e7eb",
+                        fill: false,
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    xAxes: [
+                        {
+                            gridLines: {
+                                drawOnChartArea: false,
+                            },
+                        },
+                    ],
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
