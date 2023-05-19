@@ -2,15 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Newsletter</title>
+    <style>
+        .bg {
+            background-image: url("https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20112%20%2810%29.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
-<body>
-    <h1 class="text-gray-700 underline font-black text-5xl">hello world</h1>
+<body style="font-family: poppins" class="overflow-y-hidden">
+    <div
+        class="lg:max-w-[1440px] bg md:max-w-[744px] max-w-[375px] m-auto backdrop-blur-md lg:px-5 xl:px-12 2xl:px-12 md:px-5 px-3 py-20 mt-12">
+        <div class="lg:flex justify-between items-center gap-16">
+            <div class="lg:max-w-[624px] w-full">
+                <h1 class="lg:text-5xl text-3xl text-gray-800 font-medium">
+                    Newsletter
+                </h1>
+                <h1
+                    class="lg:text-lg xl:text-xl 2xl:text-xl md:text-xl text-base md:text-lg text-base text-gray-600 font-normal mt-5 lg:max-w-[540px] w-full">
+                    Sign up for our newsletter and get weekly updates. We only send
+                    emails about our latest products on the market once a week every
+                    Friday
+                </h1>
+                <div class="flex lg:mt-12 md:mt-12 mt-5">
+                    <input type="text" id="first_name"
+                        class="hidden lg:block md:block bg-transparent border-black border text-sm outline-none block lg:w-96 w-full py-3.5 px-3 placeholder:text-gray-800 lg:rounded-l-full md:rounded-l-full"
+                        placeholder="Your email" required />
+                    <button
+                        class="text-white hidden lg:block md:block bg-black hover:bg-gray-900 focus:bg-gray-900 py-3.5 lg:w-32 md:w-44 w-full lg:rounded-r-full md:rounded-r-full mt-4 lg:mt-0 md:mt-0">
+                        Subscribe
+                    </button>
+                </div>
+                <div class="">
+                    <input type="text" id="first_name"
+                        class="bg-transparent border-black block lg:hidden md:hidden border text-sm outline-none block w-full py-3.5 px-3 placeholder:text-gray-800 rounded-full"
+                        placeholder="Your email" required />
+                    <button
+                        class="text-white bg-black hover:bg-gray-900 block lg:hidden md:hidden focus:bg-gray-900 py-3.5 w-full rounded-full mt-4 lg:mt-0 md:mt-0">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            <div class="lg:max-w-[624px] w-full border rounded-2xl lg:px-8 px-3 py-9 mt-12 lg:mt-0">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Frame%201937.svg" />
+                <h1
+                    class="lg:text-lg xl:text-xl 2xl:text-xl md:text-xl text-base text-gray-600 font-normal mt-5 lg:max-w-[560px] w-full">
+                    This website is the best I have found so far. Firstly it has huge
+                    range of softwares which are perfectly designed. All of the designs
+                    work on every medium smoothly. I just love it!!!
+                </h1>
+                <div class="flex items-center gap-5 mt-8">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Uer%20Image.svg" />
+
+                    <div class="">
+                        <h1 class="text-gray-800 lg:text-lg text-base font-medium leading-6">
+                            William Jackson
+                        </h1>
+                        <h1 class="text-gray-600 lg:text-lg text-base font-normal">
+                            CEO at Alphasquad Limited
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
